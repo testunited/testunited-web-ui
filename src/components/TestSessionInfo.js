@@ -5,6 +5,7 @@ import axios from 'axios';
 import TestRunList from './TestRunList';
 
 export class TestSessionInfo extends Component {
+    baseUrl = "http://web-api.int.testunited.minikube.local"
 
     state = {
         testSession: {},
@@ -12,9 +13,9 @@ export class TestSessionInfo extends Component {
       }
     
       componentDidMount(){
-        axios.get('http://web-api.int.testunited.minikube.local/testsessions/'+this.props.match.params.testSessionId)
+        axios.get(this.baseUrl + '/testsessions/'+this.props.match.params.testSessionId)
          .then(res => this.setState({testSession: res.data}))
-        axios.get('http://web-api.int.testunited.minikube.local/testsessions/'+this.props.match.params.testSessionId+'/testruns')
+        axios.get(this.baseUrl + '/testsessions/'+this.props.match.params.testSessionId + '/testruns')
          .then(res => this.setState({testRuns: res.data}))
       }
 

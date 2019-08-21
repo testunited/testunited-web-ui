@@ -5,13 +5,14 @@ import axios from 'axios';
 import TestRunList from './TestRunList';
 
 export class TestRunInfo extends Component {
+    baseUrl = "http://web-api.int.testunited.minikube.local"
 
     state = {
         testRun: undefined
       }
     
     componentDidMount(){
-    axios.get('http://web-api.int.testunited.minikube.local/testruns/'+this.props.match.params.testRunId)
+    axios.get(this.baseUrl+'/testruns/'+this.props.match.params.testRunId)
         .then(res => this.setState({testRun: res.data}))
     }
 
