@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import TestRunList from './TestRunList';
+import Config from '../Config';
 
 export class TestSessionInfo extends Component {
-    baseUrl = "http://web-api.int.testunited.minikube.local"
+    baseUrl = new Config().getApiHost();
 
     state = {
         testSession: {},

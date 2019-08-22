@@ -6,6 +6,7 @@ function Header(){
             <h1>TestUnited</h1>
             <Link style={linkStyle} to="/">Home</Link> |
             <Link style={linkStyle} to="/testsessions">Test Sessions</Link> |
+            <Link style={linkStyle} to="/testcases">Test Cases</Link> |
             <Link style={linkStyle} to="/about">About</Link>
         </header>
     )
