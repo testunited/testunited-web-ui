@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
 import axios from 'axios';
-import TestRunList from './TestRunList';
-import Config from '../Config';
+import Config from '../../Config';
 
 export class TestRunInfo extends Component {
     baseUrl = new Config().getApiHost();
@@ -19,7 +17,7 @@ export class TestRunInfo extends Component {
 
 
     render() {
-        if(this.state.testRun == undefined)
+        if(this.state.testRun === undefined)
             return (<div>loading...</div>);
         
         const {id, timeStamp, result, testCase} = this.state.testRun;
@@ -28,7 +26,7 @@ export class TestRunInfo extends Component {
             <div>
                 Id: {id} <br/>
                 Time: {timeStamp}<br/>
-                Test Case: {testCase != undefined? testCase.name:""}<br/>
+                Test Case: {testCase !== undefined? testCase.name:""}<br/>
                 Result: {result? "true": "false"} <br/>
             </div>
 

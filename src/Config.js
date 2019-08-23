@@ -2,10 +2,6 @@
 class Config{
     api_host_dev = "localhost:9001";
 
-    constructor(){
-
-    }
-
     getApiHost = () => {
             var protocol = window.location.protocol;
             if(window.location.hostname === "localhost")
