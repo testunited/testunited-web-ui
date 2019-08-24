@@ -8,8 +8,8 @@ export class TestSessionListItem extends Component {
         const {id, name, result} = this.props.item;
         const link = "/testsessions/" + id;
         return (
-            <div class="divTableRow">
-            <div class="divTableCell"><Link to={link}>{name}</Link></div>
+            <div className="divTableRow">
+            <div className="divTableCell"><Link to={link}>{name}</Link></div>
             </div>
         )
     }

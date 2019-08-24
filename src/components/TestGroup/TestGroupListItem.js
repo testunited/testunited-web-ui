@@ -7,8 +7,8 @@ export class TestGroupListItem extends Component {
         const testGroup = this.props.item;
         const link = "/testgroups/" + testGroup.id;
         return (
-            <div class="divTableRow">
-            <div class="divTableCell"><Link to={link}>{testGroup.name}</Link></div>
+            <div className="divTableRow">
+            <div className="divTableCell"><Link to={link}>{testGroup.name}</Link></div>
             </div>
         )
     }

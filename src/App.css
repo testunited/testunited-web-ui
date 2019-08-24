@@ -60,3 +60,13 @@
 .divTableBody {
 	display: table-row-group;
 }
+
+.activeLink {
+  color:'#f00';
+  text-decoration: 'none'
+}
+
+.link {
+  color:'#fff';
+  text-decoration: 'none'
+}

@@ -18,13 +18,13 @@ class TestTargetList extends React.Component {
   
   render(){
     return (<div><div><h2>Test Targets</h2></div>
-    <div class="divTable">
-      <div class="divTableHeading">
-        <div class="divTableHead">Microservice</div>
-        <div class="divTableHead">HTTP Method</div>
-        <div class="divTableHead">Path</div>
+    <div className="divTable">
+      <div className="divTableHeading">
+        <div className="divTableHead">Microservice</div>
+        <div className="divTableHead">HTTP Method</div>
+        <div className="divTableHead">Path</div>
       </div>
-      <div class="divTableBody"> {
+      <div className="divTableBody"> {
       this.state.testTargets.map((testTarget) => (
         <TestTargetListItem key={testTarget.id} item={testTarget} />
     ))} 

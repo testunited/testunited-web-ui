@@ -18,12 +18,12 @@ class TestCaseList extends React.Component {
   
   render(){
     return (<div><div><h2>Test Cases</h2></div>
-    <div class="divTable">
-    <div class="divTableHeading">
-        <div class="divTableHead">Name</div>
-        <div class="divTableHead">Source</div>
+    <div className="divTable">
+    <div className="divTableHeading">
+        <div className="divTableHead">Name</div>
+        <div className="divTableHead">Source</div>
       </div>    
-    <div class="divTableBody"> {
+    <div className="divTableBody"> {
       this.state.testCases.map((testCase) => (
         <TestCaseListItem key={testCase.id} item={testCase} />
     ))} 

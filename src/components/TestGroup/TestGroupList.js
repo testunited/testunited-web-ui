@@ -18,11 +18,11 @@ class TestGroupList extends React.Component {
   
   render(){
     return (<div><div><h2>Test Groups</h2></div>
-    <div class="divTable">
-      <div class="divTableHeading">
-        <div class="divTableHead">Name</div>
+    <div className="divTable">
+      <div className="divTableHeading">
+        <div className="divTableHead">Name</div>
       </div>
-      <div class="divTableBody"> {
+      <div className="divTableBody"> {
       this.state.testGroups.map((testGroup) => (
         <TestGroupListItem key={testGroup.id} item={testGroup} />
     ))} 

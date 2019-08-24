@@ -7,10 +7,10 @@ export class TestTargetListItem extends Component {
         const testTarget = this.props.item;
         const link = "/testtargets/" + testTarget.id;
         return (
-            <div class="divTableRow">
-            <div class="divTableCell"><Link to={link}>{testTarget.microservice}</Link></div>
-            <div class="divTableCell"><Link to={link}>{testTarget.method}</Link></div>
-            <div class="divTableCell"><Link to={link}>{testTarget.path}</Link></div>
+            <div className="divTableRow">
+            <div className="divTableCell"><Link to={link}>{testTarget.microservice}</Link></div>
+            <div className="divTableCell"><Link to={link}>{testTarget.method}</Link></div>
+            <div className="divTableCell"><Link to={link}>{testTarget.path}</Link></div>
             </div>
         )
     }

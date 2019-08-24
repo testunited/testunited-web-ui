@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 function Header(){
     return (
         <header style={headerStyle}>
             <h1>TestUnited</h1>
-            <Link style={linkStyle} to="/">Home</Link>&nbsp;|&nbsp;
-            <Link style={linkStyle} to="/testsessions">Test Sessions</Link>&nbsp;|&nbsp; 
-            <Link style={linkStyle} to="/testcases">Test Cases</Link>&nbsp;|&nbsp;
-            <Link style={linkStyle} to="/testtargets">Test Targets</Link>&nbsp;|&nbsp;
-            <Link style={linkStyle} to="/testgroups">Test Groups</Link>&nbsp;|&nbsp;
-            <Link style={linkStyle} to="/about">About</Link>
+            <NavLink exact style={linkStyle} activeStyle={activeLinkStyle} to="/">Home</NavLink>&nbsp;|&nbsp;
+            <NavLink style={linkStyle} activeStyle={activeLinkStyle} to="/testsessions">Test Sessions</NavLink>&nbsp;|&nbsp; 
+            <NavLink style={linkStyle} activeStyle={activeLinkStyle} to="/testcases">Test Cases</NavLink>&nbsp;|&nbsp;
+            <NavLink style={linkStyle} activeStyle={activeLinkStyle} to="/testtargets">Test Targets</NavLink>&nbsp;|&nbsp;
+            <NavLink style={linkStyle} activeStyle={activeLinkStyle} to="/testgroups">Test Groups</NavLink>&nbsp;|&nbsp;
+            <NavLink style={linkStyle} activeStyle={activeLinkStyle} to="/about">About</NavLink>
         </header>
     )
 }
@@ -24,5 +24,10 @@ const headerStyle = {
 const linkStyle = {
     color:'#fff',
     textDecoration: 'none'
+}
+
+const activeLinkStyle = {
+    color:'#f00',
+    textDecoration: 'bold'
 }
 export default Header;

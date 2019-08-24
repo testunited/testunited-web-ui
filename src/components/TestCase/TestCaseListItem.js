@@ -7,9 +7,9 @@ export class TestCaseListItem extends Component {
         const {id, name,testSourceId} = this.props.item;
         const link = "/testcases/" + id;
         return (
-            <div class="divTableRow">
-            <div class="divTableCell"><Link to={link}>{name}</Link></div>
-            <div class="divTableCell">{testSourceId}</div>
+            <div className="divTableRow">
+            <div className="divTableCell"><Link to={link}>{name}</Link></div>
+            <div className="divTableCell">{testSourceId}</div>
             </div>
         )
     }
