@@ -13,6 +13,17 @@ class ApplicationList extends React.Component {
     applications: []
   }
 
+  headerStyle = {
+    background: '#333',
+    color: '#fff',
+    textAlign: 'center',
+    padding: '10px'
+  }
+  bodyStyle = {
+    color: '#000',
+    textAlign: 'center',
+    padding: '10px'
+  }
 
   componentDidMount() {
     axios.get(this.baseUrl + '/applications')
@@ -21,17 +32,24 @@ class ApplicationList extends React.Component {
 
   render() {
 
-    return (<div><div><h2>Applications</h2></div>
-      <div className="divTable">
-        <div className="divTableHeading">
-          <div className="divTableHead">Name</div>
-        </div>{
+    return (
+      <React.Fragment>
+      <header style={this.headerStyle}>
+        <h1>TestUnited</h1>
+        <h3>Please select an application to proceed.. </h3>
+      </header>
+      <body style={this.bodyStyle}>
+      {
           this.state.applications.map((app) => (
             <ApplicationListItem key={app.id} item={app} />
-          ))}
-      </div>
-    </div>);
+          ))
+        }
+      </body>
+      </React.Fragment>
+      );
   }
+
+
 }
 
 export default ApplicationList;

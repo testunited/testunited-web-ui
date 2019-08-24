@@ -12,6 +12,7 @@ import TestGroupInfo from './components/TestGroup/TestGroupInfo'
 import TestRunInfo from './components/TestRun/TestRunInfo'
 import AppHeader from './components/layout/AppHeader'
 import About from './components/pages/About'
+import Home from './components/pages/Home'
 import ApplicationList from './components/Application/ApplicationList'
 //import uuid from 'uuid';
 import './App.css';
@@ -24,6 +25,10 @@ class App extends React.Component {
   baseUrl = new Config().getApiHost();
 
   setApplication = application => {
+    if(application == undefined){
+      this.setState({application: application});
+      return;
+    }
     axios.get(this.baseUrl + '/applications/' + application.id)
       .then(res => this.setState({ application: res.data }))
   }
@@ -40,8 +45,7 @@ class App extends React.Component {
         <Router>
           <div className="App">
             <Header />
-            <AppHeader />
-            <Route exact path="/" component={ApplicationList} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/testsessions" component={TestSessionList} />
             <Route exact path="/testcases" component={TestCaseList} />
             <Route exact path="/testtargets" component={TestTargetList} />

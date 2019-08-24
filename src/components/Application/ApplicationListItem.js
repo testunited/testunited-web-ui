@@ -5,15 +5,18 @@ import AppContext from '../../AppContext'
 
 export class ApplicationListItem extends Component {
 
+  linkStyle = {
+    color:'#000',
+    textDecoration: 'none',
+    textAlign:'center'
+}
     render() {
         const { id, name } = this.props.item;
         const link = "/applications/" + id;
         return (
             <AppContext.Consumer>
                 {({ application, setApplication }) => (
-                    <div className="divTableRow">
-                        <div className="divTableCell"><a href="#" onClick={() => setApplication({ id: id })} >{name}</a></div>
-                    </div>
+                        <div><a href="#" style={this.linkStyle} onClick={() => setApplication({ id: id })} >{name}</a></div>
                 )}
             </AppContext.Consumer>
         )
