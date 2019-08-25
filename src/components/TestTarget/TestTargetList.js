@@ -20,9 +20,8 @@ class TestTargetList extends React.Component {
     return (<div><div><h2>Test Targets</h2></div>
     <div className="divTable">
       <div className="divTableHeading">
-        <div className="divTableHead">Microservice</div>
-        <div className="divTableHead">HTTP Method</div>
-        <div className="divTableHead">Path</div>
+        <div className="divTableHead">Component</div>
+        <div className="divTableHead">Function</div>
       </div>
       <div className="divTableBody"> {
       this.state.testTargets.map((testTarget) => (

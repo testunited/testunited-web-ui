@@ -114,4 +114,4 @@ export class TestCaseInfo extends Component {
   }
 }
 
-export default TestCaseInfo
+export default TestCaseInfo;

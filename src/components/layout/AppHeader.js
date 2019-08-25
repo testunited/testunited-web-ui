@@ -7,9 +7,9 @@ class AppHeader extends React.Component {
     return (
       <AppContext.Consumer>
         {({ application, setApplication }) => (
-          (application != undefined)?
-          <div><div>{application.id}</div></div>:
-          <div>no application selected</div>
+          (application != undefined) ?
+            <div><div>{application.id}</div></div> :
+            <div>no application selected</div>
         )}
       </AppContext.Consumer>
     );

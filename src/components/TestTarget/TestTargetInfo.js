@@ -54,9 +54,8 @@ export class TestTargetInfo extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div style={{textAlign:'left'}}>
                     <span style={labelStyle}>Id:&nbsp;</span> {this.state.testTarget.id} <br/>
-                    <span style={labelStyle}>Microservice:&nbsp;</span> {this.state.testTarget.microservice} <br/>
-                    <span style={labelStyle}>HTTP Method:&nbsp;</span> {this.state.testTarget.method} <br/>
-                    <span style={labelStyle}>Path:&nbsp;</span> {this.state.testTarget.path} <br/>
+                    <span style={labelStyle}>Component:&nbsp;</span> {this.state.testTarget.component.name} <br/>
+                    <span style={labelStyle}>Function:&nbsp;</span> {this.state.testTarget.function} <br/>
 
                 </div>
             </form>
