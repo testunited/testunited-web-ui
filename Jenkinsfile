@@ -12,7 +12,7 @@ pipeline {
    		stage('Define') {
    			steps {
    				script {
-		        	version = "1.0.0"
+		        	version = sh(returnStdout: true, script: "gradle -q appVersion").trim()
 		        	BUILD_TAG = "v${version}-b${BUILD_NUMBER}"
         			TESTUNITED_SESSION_NAME = "${env.JOB_BASE_NAME}-ci-build-${BUILD_TAG}"
         			DOCKER_IMAGE_REMOTE="${DOCKER_IMAGE_LOCAL}:${BUILD_TAG}"

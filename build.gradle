@@ -31,3 +31,9 @@ docker {
     copySpec.from('build').into('.')
 }
 assemble.dependsOn(bundle)
+
+task appVersion{
+    doLast {
+    	println version
+  }
+}
