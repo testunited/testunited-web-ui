@@ -1,0 +1,20 @@
+[
+	{ 
+	    "application":{
+	    	"id":"APP_GUID"
+	    },
+	    "name":"booktitle service"
+	},
+	{ 
+	    "application":{
+	    	"id":"APP_GUID"
+	    },
+	    "name":"course service"
+	},
+	{ 
+	    "application":{
+	    	"id":"APP_GUID"
+	    },
+	    "name":"provisioning service"
+	}
+]
