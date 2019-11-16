@@ -3,8 +3,11 @@ import TestCaseListItem from './TestCaseListItem';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Config from '../../Config';
+import AppContext from '../../AppContext'
 
 class TestCaseList extends React.Component {
+
+  static contextType = AppContext;
 
   baseUrl = new Config().getApiHost();
   state = {
@@ -12,7 +15,7 @@ class TestCaseList extends React.Component {
   }
   
   componentDidMount(){
-    axios.get(this.baseUrl+'/testcases')
+    axios.get(this.baseUrl + '/applications/' + this.context.application.id + '/testcases')
      .then(res => this.setState({testCases: res.data}))
   }
   

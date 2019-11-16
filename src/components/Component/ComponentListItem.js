@@ -3,25 +3,21 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 import AppContext from '../../AppContext'
 
-export class ApplicationListItem extends Component {
+export class ComponentListItem extends Component {
 
   linkStyle = {
     color: '#000',
     textDecoration: 'none',
     textAlign: 'center'
   }
-  
+
   render() {
     const { id, name } = this.props.item;
     const link = "/applications/" + id;
     return (
-      <AppContext.Consumer>
-        {({ application, setApplication }) => (
-          <div><a href="#" style={this.linkStyle} onClick={() => setApplication({ id: id })} >{name}</a></div>
-        )}
-      </AppContext.Consumer>
+      <div><a href="#" style={this.linkStyle} onClick={this.props.onClick} >{name}</a></div>
     )
   }
 }
 
-export default ApplicationListItem;
+export default ComponentListItem;

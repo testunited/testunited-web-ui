@@ -4,7 +4,7 @@ import axios from 'axios';
 import TestRunList from '../TestRun/TestRunList';
 import Config from '../../Config';
 
-export class TestSessionInfo extends Component {
+export class ComponentInfo extends Component {
   baseUrl = new Config().getApiHost();
 
   state = {

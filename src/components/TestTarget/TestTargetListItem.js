@@ -8,8 +8,7 @@ export class TestTargetListItem extends Component {
         const link = "/testtargets/" + testTarget.id;
         return (
             <div className="divTableRow">
-            <div className="divTableCell"><Link to={link}>{testTarget.component.name}</Link></div>
-            <div className="divTableCell"><Link to={link}>{testTarget.function}</Link></div>
+            <div className="divTableCell"><Link to={link}>{testTarget.name}</Link></div>
             </div>
         )
     }

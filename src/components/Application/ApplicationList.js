@@ -38,13 +38,13 @@ class ApplicationList extends React.Component {
           <h1>TestUnited</h1>
           <h3>Please select an application to proceed.. </h3>
         </header>
-        <body style={this.bodyStyle}>
+        <div style={this.bodyStyle}>
           {
             this.state.applications.map((app) => (
               <ApplicationListItem key={app.id} item={app} />
             ))
           }
-        </body>
+        </div>
       </React.Fragment>
     );
   }

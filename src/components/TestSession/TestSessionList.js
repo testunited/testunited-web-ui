@@ -16,14 +16,13 @@ class TestSessionList extends React.Component {
 
 
   componentDidMount() {
-    axios.get(this.baseUrl + '/testsessions')
+    axios.get(this.baseUrl + '/applications/' + this.context.application.id + '/testsessions')
       .then(res => this.setState({ testSessions: res.data }))
   }
 
   render() {
     return (
-      <AppContext.Consumer>{({ application }) => (
-        <div><div><h2>Test Sessions for {application.name}</h2></div>
+        <div><div><h2>Test Sessions for {this.context.application.name}</h2></div>
           <div className="divTable">
             <div className="divTableHeading">
               <div className="divTableHead">Name</div>
@@ -33,7 +32,7 @@ class TestSessionList extends React.Component {
               ))}
           </div>
         </div>
-      )}</AppContext.Consumer>);
+      );
 
   }
 }

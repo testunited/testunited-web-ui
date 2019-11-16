@@ -54,8 +54,7 @@ export class TestTargetInfo extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div style={{textAlign:'left'}}>
                     <span style={labelStyle}>Id:&nbsp;</span> {this.state.testTarget.id} <br/>
-                    <span style={labelStyle}>Component:&nbsp;</span> {this.state.testTarget.component.name} <br/>
-                    <span style={labelStyle}>Function:&nbsp;</span> {this.state.testTarget.function} <br/>
+                    <span style={labelStyle}>Function:&nbsp;</span> {this.state.testTarget.name} <br/>
 
                 </div>
             </form>

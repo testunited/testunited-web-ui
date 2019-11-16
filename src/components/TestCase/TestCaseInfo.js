@@ -91,7 +91,7 @@ export class TestCaseInfo extends Component {
             <div className="divTableCell">
               <select name="testTarget" onChange={this.handleTargetChange} value={this.state.testCase.testTarget != null ? this.state.testCase.testTarget.id : null}>
                 <option> ----- </option>
-                {this.state.testTargets.map(testTarget => { return (<option value={testTarget.id}>{testTarget.microservice}</option>) })}
+                {this.state.testTargets.map(testTarget => { return (<option value={testTarget.id}>{testTarget.name}</option>) })}
               </select>
             </div>
           </div>

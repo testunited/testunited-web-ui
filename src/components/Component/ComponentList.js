@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ApplicationListItem from './ComponentListItem';
+import ComponentListItem from './ComponentListItem';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Config from '../../Config';
@@ -41,7 +41,7 @@ class ApplicationList extends React.Component {
         <body style={this.bodyStyle}>
           {
             this.state.applications.map((app) => (
-              <ApplicationListItem key={app.id} item={app} />
+              <ComponentListItem key={app.id} item={app} />
             ))
           }
         </body>

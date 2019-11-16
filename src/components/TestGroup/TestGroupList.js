@@ -3,8 +3,11 @@ import TestGroupListItem from './TestGroupListItem';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Config from '../../Config';
+import AppContext from '../../AppContext'
 
 class TestGroupList extends React.Component {
+
+  static contextType = AppContext;
 
   baseUrl = new Config().getApiHost();
   state = {
@@ -12,7 +15,7 @@ class TestGroupList extends React.Component {
   }
   
   componentDidMount(){
-    axios.get(this.baseUrl + '/testgroups')
+    axios.get(this.baseUrl + '/applications/' + this.context.application.id + '/testgroups')
      .then(res => this.setState({testGroups: res.data}))
   }
   
