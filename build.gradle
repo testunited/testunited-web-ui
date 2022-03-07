@@ -5,19 +5,17 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 plugins {
-    id "com.moowork.node" version "1.2.0"
+    id "com.github.node-gradle.node" version "3.1.1"
 	id 'com.palantir.docker' version '0.22.1'
 }
  
-apply plugin: 'base'
-apply plugin: "com.moowork.node"
- 
+apply plugin: 'base' 
 
 group = 'org.testunited'
 version = '0.1.1'
 
 node {
-    version = "12.13.1"
+    version = "16.2.0"
     download = true
 }
  
