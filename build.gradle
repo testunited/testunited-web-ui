@@ -12,7 +12,7 @@ plugins {
 apply plugin: 'base' 
 
 group = 'org.testunited'
-version = '0.1.1'
+version = '0.2.1'
 
 node {
     version = "16.2.0"
@@ -31,6 +31,12 @@ docker {
 assemble.dependsOn(bundle)
 
 task appVersion{
+    doLast {
+    	println version
+  }
+}
+
+task getVersion{
     doLast {
     	println version
   }
